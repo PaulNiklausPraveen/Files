@@ -1,4 +1,2 @@
-#PS script to install IIS role and modify default webpage
-
-Install-WindowsFeature -name Web-Server -IncludeManagementTools
-Set-Content -Path "C:\InetPub\wwwroot\Default.Html -Value "WebPage is loaded from $($Env:ComputerName)"
+Add-WindowsFeature Web-Server
+Set-Content -Path "C:\inetpub\wwwroot\Default.htm" -Value "WebPage is loaded from the server $($env:computername) !"
